@@ -31,6 +31,7 @@ import refreshRegistrations from '../extensions/presets/jetpack/utils/refresh-re
 import { getSiteOption, getSiteSlug } from 'state/sites/selectors';
 import { getPageTemplates } from 'state/page-templates/selectors';
 import { MimeTypes } from 'lib/media/constants';
+import ConvertToBlocksDialog from './components/convert-to-blocks';
 
 /**
  * Style dependencies
@@ -129,6 +130,7 @@ class GutenbergEditor extends Component {
 				<PageViewTracker { ...this.getAnalyticsPathAndTitle() } />
 				<EditorPostTypeUnsupported type={ postType } />
 				<EditorDocumentHead postType={ postType } />
+				<ConvertToBlocksDialog />
 				<Editor
 					settings={ editorSettings }
 					hasFixedToolbar={ true }
