@@ -1,20 +1,17 @@
 // Mockup wrap
 .site-mockup__wrap {
 	margin: auto;
-	padding: 0 16px;
-	transition: max-width 0.2s ease-in-out;
-
+	padding: 16px;
+	transition: max-width 200ms ease-in-out;
 
 	// This is temporary until we reduce the vertical
 	// and info steps down to a single row.
 	// position: relative;
 	// z-index: 1000000; // Yea yea, I know... -shaun
 
-
 	// Side by side layout uses flexbox to show
 	// both mockups next to each other.
 	@include breakpoint( '>960px' ) {
-		padding: 16px;
 		max-width: 1200px;
 		display: flex;
 		align-items: flex-start;
@@ -36,10 +33,9 @@
 
 		.site-mockup__viewport.is-mobile {
 			position: absolute;
-				top: 40px;
-				right: 8px;
-			box-shadow: 0 0 0 1px $gray,
-				0 4px 12px 0 rgba( 0, 0, 0, 0.30 );
+			top: 40px;
+			right: 8px;
+			box-shadow: 0 0 0 1px $gray, 0 4px 12px 0 rgba( 0, 0, 0, 0.3 );
 
 			.site-mockup__body {
 				height: 500px;
@@ -71,7 +67,7 @@
 	background: $white;
 	position: relative;
 	box-shadow: 0 0 0 1px $gray;
-	transition: all 0.2s cubic-bezier( 0.175, 0.885, 0.32, 1.275 );
+	transition: all 200ms cubic-bezier( 0.175, 0.885, 0.32, 1.275 );
 
 	// Hide the mockups until we have vertical
 	// data to show.
@@ -88,6 +84,6 @@
 	&.is-mobile {
 		border-radius: 12px;
 		width: 280px;
-		transition-delay: 0.2s;
+		transition-delay: 200ms;
 	}
 }
